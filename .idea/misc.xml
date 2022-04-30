@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/wolfheluo/Documents/workspace/MID_HW_APP/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/wolfheluo/Documents/workspace/MID_HW_APP/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2355" />
+        <entry key="..\:/Users/wolfheluo/Documents/workspace/MID_HW_APP/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/wolfheluo/Documents/workspace/MID_HW_APP/app/src/main/res/layout/logged_out.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/wolfheluo/Documents/workspace/MID_HW_APP/app/src/main/res/layout/login.xml" value="0.245018115942029" />
+        <entry key="..\:/Users/wolfheluo/Documents/workspace/MID_HW_APP/app/src/main/res/layout/register1.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/wolfheluo/Documents/workspace/MID_HW_APP/app/src/main/res/layout/register2.xml" value="0.23324275362318841" />
+        <entry key="..\:/Users/wolfheluo/Documents/workspace/MID_HW_APP/app/src/main/res/layout/search.xml" value="0.33" />
       </map>
     </option>
   </component>
