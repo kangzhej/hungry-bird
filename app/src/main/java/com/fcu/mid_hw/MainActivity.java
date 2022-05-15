@@ -2,6 +2,7 @@ package com.fcu.mid_hw;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,8 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btn1, btn2;
+    private Object AdapterView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +23,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
+
+
     }
 
 
@@ -27,13 +32,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button:
-                //what btn1 does
-                break;
+
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, login.class);
+                startActivity(intent);
+
+            break;
             case R.id.button2:
-                //what btn2 does
+                Intent intent2 = new Intent();
+                intent2.setClass(MainActivity.this, register1.class);
+                startActivity(intent2);
                 break;
             default:
                 break;
         }
     }
+
 }
