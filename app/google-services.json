@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "224641865309",
+    "project_id": "hungry-bird-12e4f",
+    "storage_bucket": "hungry-bird-12e4f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224641865309:android:fc217966c2715f8a429fb4",
+        "android_client_info": {
+          "package_name": "com.fcu.mid_hw"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224641865309-d2pd658d85bn8i8nokjo7dr6clg27gpa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoHF-Qe9ebh9owF5WK9aBgBh3iHO5_O2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224641865309-d2pd658d85bn8i8nokjo7dr6clg27gpa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
