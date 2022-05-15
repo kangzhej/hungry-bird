@@ -10,10 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MID_HW">
         <activity
-            android:name=".login"
-            android:exported="false" />
-        <activity
-            android:name=".register1"
+            android:name=".RegitserActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
