@@ -10,12 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MID_HW">
         <activity
-            android:name=".imageAdapter"
-            android:exported="false" />
-        <activity
-            android:name=".Discover_page"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
