@@ -10,7 +10,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btn1, btn2;
-    Button btn3;    //testing
+    Button btn3, btn4;    //testing
     private Object AdapterView;
 
 
@@ -23,11 +23,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn2 = (Button) findViewById(R.id.button2);
 
         btn3 = (Button) findViewById(R.id.button3); //testing
+        btn4 = (Button) findViewById(R.id.button4); //testing
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
 
         btn3.setOnClickListener(this);  //testing
+        btn4.setOnClickListener(this);  //testing
 
 
     }
@@ -53,6 +55,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent3 = new Intent();
                 intent3.setClass(MainActivity.this,Discover_page.class);
                 startActivity(intent3);
+                break;
+
+
+            case R.id.button4:
+                Intent intent4 = new Intent();
+                intent4.setClass(MainActivity.this,Profile_page.class);
+                startActivity(intent4);
                 break;
 
             default:
