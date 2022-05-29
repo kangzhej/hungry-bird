@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.logged_out);
 
-        btn1 = (Button) findViewById(R.id.button);
+        btn1 = (Button) findViewById(R.id.next_but);
         btn2 = (Button) findViewById(R.id.button2);
 
         btn3 = (Button) findViewById(R.id.button3); //testing
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.button:
+            case R.id.next_but:
 
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this, login.class);
