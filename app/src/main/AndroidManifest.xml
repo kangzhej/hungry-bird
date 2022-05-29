@@ -16,6 +16,13 @@
             android:name=".login"
             android:exported="false" />
         <activity
+            android:name=".Discover_page"
+            android:exported="false" />
+        <activity
+            android:name=".Profile_page"
+            android:exported="false" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

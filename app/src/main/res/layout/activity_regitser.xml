@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@+id/back_btn" />
 
     <Button
-        android:id="@+id/next_but"
+        android:id="@+id/onRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
