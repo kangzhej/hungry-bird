@@ -29,18 +29,18 @@
         app:layout_constraintTop_toBottomOf="@+id/back_btn" />
 
     <Button
-        android:id="@+id/next_but"
+        android:id="@+id/onRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:text="Register"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/radioGroup"
-        app:layout_constraintStart_toStartOf="@+id/radioGroup"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.478" />
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/editTextTextPersonName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -50,28 +50,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/name"
-        app:layout_constraintStart_toStartOf="@+id/name"
-        app:layout_constraintTop_toBottomOf="@+id/name">
-
-        <RadioButton
-            android:id="@+id/register_B_U"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="user" />
-
-        <RadioButton
-            android:id="@+id/register_B_R"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="restaurant" />
-    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
