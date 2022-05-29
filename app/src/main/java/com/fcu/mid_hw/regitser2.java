@@ -7,7 +7,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.fcu.mid_hw.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -30,8 +29,8 @@ public class regitser2 extends AppCompatActivity implements OnCompleteListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register2);
 
-        etEmail = findViewById(R.id.et_email);
-        etPassword = findViewById(R.id.et_password);
+        etEmail = findViewById(R.id.lo_email);
+        etPassword = findViewById(R.id.lo_password);
 
         firebaseAuth = firebaseAuth.getInstance();
     }
