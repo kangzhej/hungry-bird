@@ -59,7 +59,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="25dp"
         android:ems="10"
-        android:hint="password"
+        android:hint="passwd"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"

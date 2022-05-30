@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:onClick="onBack"
         android:text="返回"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,17 +30,18 @@
         app:layout_constraintTop_toBottomOf="@+id/back_btn" />
 
     <Button
-        android:id="@+id/onRegister"
+        android:id="@+id/next_but"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+        android:onClick="onLogin"
         android:text="LOGIN"
-        app:layout_constraintEnd_toEndOf="@+id/et_password"
-        app:layout_constraintStart_toStartOf="@+id/et_password"
-        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+        app:layout_constraintEnd_toEndOf="@+id/lo_password"
+        app:layout_constraintStart_toStartOf="@+id/lo_password"
+        app:layout_constraintTop_toBottomOf="@+id/lo_password" />
 
     <EditText
-        android:id="@+id/et_email"
+        android:id="@+id/lo_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -51,15 +53,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/et_password"
+        android:id="@+id/lo_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:ems="10"
         android:inputType="textPassword"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/et_email"
-        app:layout_constraintStart_toStartOf="@+id/et_email"
-        app:layout_constraintTop_toBottomOf="@+id/et_email" />
+        app:layout_constraintEnd_toEndOf="@+id/lo_email"
+        app:layout_constraintStart_toStartOf="@+id/lo_email"
+        app:layout_constraintTop_toBottomOf="@+id/lo_email" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

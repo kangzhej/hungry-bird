@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MID_HW">
         <activity
-            android:name=".RegisterActivity"
+            android:name=".Order"
+            android:exported="false" />
+        <activity
+            android:name=".profile_restaurant"
+            android:exported="false" />
+        <activity
+            android:name=".RegitserActivity"
             android:exported="false" />
         <activity
             android:name=".login"
@@ -21,7 +27,6 @@
         <activity
             android:name=".Profile_page"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">

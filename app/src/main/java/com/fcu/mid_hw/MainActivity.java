@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    public static boolean VALID_USER = false;
 
     Button btn1, btn2;
     Button btn3, btn4;    //testing
@@ -18,6 +19,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.logged_out);
+
+        //if (!VALID_USER){
+        //    Intent intent = new Intent();
+        //    intent.setClass(this,login.class);
+        //    startActivity(intent);
+        //}
 
         btn1 = (Button) findViewById(R.id.next_but);
         btn2 = (Button) findViewById(R.id.button2);
