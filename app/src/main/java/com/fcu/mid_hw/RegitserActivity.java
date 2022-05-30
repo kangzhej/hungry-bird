@@ -3,6 +3,7 @@ package com.fcu.mid_hw;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -48,6 +49,9 @@ public class RegitserActivity extends AppCompatActivity implements OnCompleteLis
         if(task.isSuccessful()){
             Toast.makeText(this,"註冊成功",Toast.LENGTH_LONG).show();
             addUser();
+            Intent intent = new Intent();
+            intent.setClass(RegitserActivity.this, regitser2.class);
+            startActivity(intent);
         }
         else{
             Toast.makeText(this,"error",Toast.LENGTH_LONG).show();
