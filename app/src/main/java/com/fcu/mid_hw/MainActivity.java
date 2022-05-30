@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     public static boolean VALID_USER = false;
@@ -15,10 +16,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Object AdapterView;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.logged_out);
+
+        ImageView logo = this.findViewById(R.id.logo);
+        logo.setImageResource(R.drawable.logo);
 
         //if (!VALID_USER){
         //    Intent intent = new Intent();
