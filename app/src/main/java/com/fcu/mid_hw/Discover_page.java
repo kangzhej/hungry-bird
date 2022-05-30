@@ -6,10 +6,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
 
-public class Discover_page extends AppCompatActivity{
+public class Discover_page extends AppCompatActivity implements View.OnClickListener{
+
+    Button btn7;
+
 
     private Integer[] taipeiPhotos = {R.drawable.barbecue, R.drawable.bread,
             R.drawable.breakfast, R.drawable.food, R.drawable.eclair,
@@ -26,5 +31,29 @@ public class Discover_page extends AppCompatActivity{
         gvPhotos.setNumColumns(2);
         ImageAdapter ia = new ImageAdapter(this, selectedPhotos);
         gvPhotos.setAdapter(ia);
+
+
+        btn7 = (Button) findViewById(R.id.button7);
+        btn7.setOnClickListener(this);
+
+    }
+
+
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.button7:
+                Intent intent = new Intent();
+                intent.setClass(Discover_page.this, Profile_page.class);
+                startActivity(intent);
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void onRes(View view){
+        Intent intent = new Intent();
+        intent.setClass(Discover_page.this, Profile_page.class);
+        startActivity(intent);
     }
 }

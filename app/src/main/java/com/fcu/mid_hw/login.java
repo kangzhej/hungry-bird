@@ -52,7 +52,11 @@ public class login extends AppCompatActivity
     public void onComplete(@NonNull Task<AuthResult> task) {
         if(task.isSuccessful()){
             Toast.makeText(this,"Successful",Toast.LENGTH_LONG).show();
-            MainActivity.VALID_USER = true;
+            //MainActivity.VALID_USER = true;
+            Intent intent = new Intent();
+            intent.setClass(login.this, Discover_page.class);
+            startActivity(intent);
+
             finish();
         }else{
             Toast.makeText(this,"Failed",Toast.LENGTH_LONG).show();
