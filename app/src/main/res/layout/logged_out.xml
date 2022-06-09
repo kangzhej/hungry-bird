@@ -8,6 +8,14 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/menu_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="testing of menu"
+        app:layout_constraintEnd_toEndOf="@+id/logo"
+        app:layout_constraintTop_toTopOf="@+id/logo" />
+
+    <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

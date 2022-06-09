@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static boolean VALID_USER = false;
 
     Button btn1, btn2;
-    Button btn3, btn4, btn5;    //testing
+    Button btn3, btn4, btn5, btn6;    //testing
     private Object AdapterView;
 
 
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn3 = (Button) findViewById(R.id.button3); //testing
         btn4 = (Button) findViewById(R.id.button4); //testing
         btn5 = (Button) findViewById(R.id.button5); //testing
+        btn6 = (Button) findViewById(R.id.menu_test); //testing
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn3.setOnClickListener(this);  //testing
         btn4.setOnClickListener(this);  //testing
         btn5.setOnClickListener(this);  //testing
+        btn6.setOnClickListener(this);  //testing
 
 
     }
@@ -58,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.setClass(MainActivity.this, login.class);
                 startActivity(intent);
 
-            break;
+                break;
             case R.id.button2:
                 Intent intent2 = new Intent();
                 intent2.setClass(MainActivity.this, RegitserActivity.class);
@@ -71,7 +73,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent3);
                 break;
 
-
             case R.id.button4:
                 Intent intent4 = new Intent();
                 intent4.setClass(MainActivity.this,Profile_page.class);
@@ -82,6 +83,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent5 = new Intent();
                 intent5.setClass(MainActivity.this, order_list.class);
                 startActivity(intent5);
+                break;
+
+            case R.id.menu_test:
+                Intent intent6 = new Intent();
+                intent6.setClass(MainActivity.this, menu.class);
+                startActivity(intent6);
                 break;
 
             default:

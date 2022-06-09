@@ -13,6 +13,12 @@
             android:name=".Order"
             android:exported="false" />
         <activity
+            android:name=".order_list"
+            android:exported="false" />
+        <activity
+            android:name=".menu"
+            android:exported="false" />
+        <activity
             android:name=".profile_restaurant"
             android:exported="false" />
         <activity
