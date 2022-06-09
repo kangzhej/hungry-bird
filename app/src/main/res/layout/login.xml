@@ -85,7 +85,7 @@
             android:id="@+id/login_r_res"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="restaurand" />
+            android:text="restaurant" />
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

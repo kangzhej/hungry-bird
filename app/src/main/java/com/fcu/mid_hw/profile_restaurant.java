@@ -16,13 +16,13 @@ public class profile_restaurant extends AppCompatActivity {
 
     public void up_menu(View view){
         Intent intent = new Intent();
-        intent.setClass(profile_restaurant.this, restaurand_menu.class);
+        intent.setClass(profile_restaurant.this, restaurant_menu.class);
         startActivity(intent);
     }
 
     public void r_gotoorderlist(View view){
         Intent intent = new Intent();
-        intent.setClass(profile_restaurant.this, restaurand_orderlist.class);
+        intent.setClass(profile_restaurant.this, restaurant_orderlies.class);
         startActivity(intent);
     }
 

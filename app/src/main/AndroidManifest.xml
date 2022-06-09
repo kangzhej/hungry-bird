@@ -10,11 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MID_HW">
         <activity
-            android:name=".restaurand_orderlist"
+            android:name=".restaurant_orderlies"
             android:exported="false" />
         <activity
-            android:name=".restaurand_menu"
+            android:name=".restaurant_menu"
             android:exported="false" />
+
+        <activity
+            android:name=".database"
+            android:exported="false" />
+
         <activity
             android:name=".Order"
             android:exported="false" />

@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class restaurand_orderlist extends AppCompatActivity {
+public class restaurant_orderlies extends AppCompatActivity {
 
     RecyclerView rv;
 
@@ -29,7 +29,7 @@ public class restaurand_orderlist extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.restaurand_orderlist);
         rv = (RecyclerView)findViewById(R.id.rorderlist_rv);
-        ad = new CustomAdapter(restaurand_orderlist.this, restaurantArray, orderTimeArray, statArray, delivererArray, priceArray);
+        ad = new CustomAdapter(restaurant_orderlies.this, restaurantArray, orderTimeArray, statArray, delivererArray, priceArray);
         rv.setAdapter(ad);
         rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setHasFixedSize(true);
@@ -42,7 +42,7 @@ public class restaurand_orderlist extends AppCompatActivity {
 
     public void rob(View view){
         Intent intent = new Intent();
-        intent.setClass(restaurand_orderlist.this, profile_restaurant.class);
+        intent.setClass(restaurant_orderlies.this, profile_restaurant.class);
         startActivity(intent);
     }
 

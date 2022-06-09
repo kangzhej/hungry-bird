@@ -65,7 +65,5 @@ public class RegitserActivity extends AppCompatActivity implements OnCompleteLis
         DatabaseReference usersRef = firebaseDatabase.getReference("users");
         Map<String,Object> user = new HashMap<>();
         user.put("email",email);
-
-
     }
 }
