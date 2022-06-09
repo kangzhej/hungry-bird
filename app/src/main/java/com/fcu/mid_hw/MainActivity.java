@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent2.setClass(MainActivity.this, RegitserActivity.class);
                 startActivity(intent2);
                 break;
-
+/*
             case R.id.button3:
                 Intent intent3 = new Intent();
                 intent3.setClass(MainActivity.this,Discover_page.class);
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent5.setClass(MainActivity.this, database.class);
                 startActivity(intent5);
                 break;
-
+*/
             default:
                 break;
         }
