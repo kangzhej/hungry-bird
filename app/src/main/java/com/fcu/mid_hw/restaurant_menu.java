@@ -18,15 +18,35 @@ public class restaurant_menu extends AppCompatActivity {
     static final String tb_name="menu";
     SQLiteDatabase db;
 
+    EditText Setoid;
+    EditText etname;
+    EditText etprice;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurand_menu);
 
-        EditText Setoid = findViewById(R.id.rest_id);
-        EditText etname = findViewById(R.id.food_name);
-        EditText etprice = findViewById(R.id.food_price);
+        Setoid = findViewById(R.id.rest_id);
+        etname = findViewById(R.id.food_name);
+        etprice = findViewById(R.id.food_price);
+
+
+    }
+
+    private void  addData(String id,String name,String price) {
+        ContentValues cv=new ContentValues(3);
+
+        cv.put("id",id);
+        cv.put("name",name);
+        cv.put("price",price);
+
+        db.insert(tb_name,null,cv);
+
+    }
+
+    public void add(View view){
 
         String id = Setoid.getText().toString();
         String name = etname.getText().toString();
@@ -36,6 +56,8 @@ public class restaurant_menu extends AppCompatActivity {
 
 
         //open database
+
+
         db = openOrCreateDatabase(db_name, Context.MODE_PRIVATE, null);
         String createTable = "Create Table If Not Exists " +
                 tb_name +
@@ -44,16 +66,21 @@ public class restaurant_menu extends AppCompatActivity {
                 "price VARCHAR(16))";
         db.execSQL(createTable);
 
+
+
         //---------------------------------------
         Cursor c=db.rawQuery("SELECT * FROM "+tb_name,null);
 
         addData(id,name,price);
+
         //if (c.getCount()==0){
-        //call addData
-        //addData(2,"珍奶", 120);
-        //c=db.rawQuery("SELECT * FROM "+tb_name,null);
+            //call addData
+            //addData(2,"珍奶", 120);
+            //c=db.rawQuery("SELECT * FROM "+tb_name,null);
         //}
-        db.close();
+
+        //db.close();
+
 
         if(c.moveToFirst()){
             String str="總共有 "+c.getCount()+"筆資料\n" ;
@@ -72,20 +99,6 @@ public class restaurant_menu extends AppCompatActivity {
         }
 
 
-
-
     }
-
-    private void  addData(String id,String name,String price) {
-        ContentValues cv=new ContentValues(3);
-
-        cv.put("id",id);
-        cv.put("name",name);
-        cv.put("price",price);
-
-        db.insert(tb_name,null,cv);
-
-    }
-
 
 }
