@@ -24,12 +24,17 @@ public class database extends AppCompatActivity {
 
         //open database
         db = openOrCreateDatabase(db_name, Context.MODE_PRIVATE, null);
+
+
         String createTable = "Create Table If Not Exists " +
                 tb_name +
                 "(id INT(16), " +
                 "name VARCHAR(32), " +
                 "email VARCHAR(64))";
         db.execSQL(createTable);
+
+
+
 
         Cursor c=db.rawQuery("SELECT * FROM "+tb_name,null);
 
@@ -40,13 +45,20 @@ public class database extends AppCompatActivity {
             addData(2,"FCU1 Co.", "FCU@gmail.com");
 
 
+
             c=db.rawQuery("SELECT * FROM "+tb_name,null);
 
         }
 
+
         TextView txv = (TextView) findViewById(R.id.txv);
         txv.setText("資料庫path: " + db.getPath() + "\n");
+
+
         db.close();
+
+
+
 
 
         if(c.moveToFirst()){
@@ -67,7 +79,7 @@ public class database extends AppCompatActivity {
 
     }
 
-    private void  addData(Integer id,String name,String email) {
+    private void addData(Integer id,String name,String email) {
         ContentValues cv=new ContentValues(3);
 
         cv.put("id",id);
