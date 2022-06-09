@@ -37,8 +37,9 @@
         android:onClick="onLogin"
         android:text="LOGIN"
         app:layout_constraintEnd_toEndOf="@+id/lo_password"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="@+id/lo_password"
-        app:layout_constraintTop_toBottomOf="@+id/lo_password" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
 
     <EditText
         android:id="@+id/lo_email"
@@ -63,5 +64,28 @@
         app:layout_constraintEnd_toEndOf="@+id/lo_email"
         app:layout_constraintStart_toStartOf="@+id/lo_email"
         app:layout_constraintTop_toBottomOf="@+id/lo_email" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/lo_password"
+        app:layout_constraintStart_toStartOf="@+id/lo_password"
+        app:layout_constraintTop_toBottomOf="@+id/lo_password">
+
+        <RadioButton
+            android:id="@+id/login_r_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="user" />
+
+        <RadioButton
+            android:id="@+id/login_r_res"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="restaurand" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
