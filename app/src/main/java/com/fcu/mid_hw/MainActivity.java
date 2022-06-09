@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.button4:
                 Intent intent4 = new Intent();
-                intent4.setClass(MainActivity.this,Profile_page.class);
+                intent4.setClass(MainActivity.this, restaurant_menu.class);
                 startActivity(intent4);
                 break;
 
