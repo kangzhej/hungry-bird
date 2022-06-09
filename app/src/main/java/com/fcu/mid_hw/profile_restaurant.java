@@ -2,7 +2,9 @@ package com.fcu.mid_hw;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class profile_restaurant extends AppCompatActivity {
 
@@ -11,4 +13,17 @@ public class profile_restaurant extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_restaurant);
     }
+
+    public void up_menu(View view){
+        Intent intent = new Intent();
+        intent.setClass(profile_restaurant.this, restaurand_menu.class);
+        startActivity(intent);
+    }
+
+    public void r_gotoorderlist(View view){
+        Intent intent = new Intent();
+        intent.setClass(profile_restaurant.this, restaurand_orderlist.class);
+        startActivity(intent);
+    }
+
 }

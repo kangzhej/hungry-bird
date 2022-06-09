@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MID_HW">
         <activity
-            android:name=".database"
+            android:name=".restaurand_orderlist"
             android:exported="false" />
         <activity
-            android:name=".order_list"
+            android:name=".restaurand_menu"
             android:exported="false" />
         <activity
             android:name=".Order"
