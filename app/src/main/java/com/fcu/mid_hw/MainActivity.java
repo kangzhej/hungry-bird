@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static boolean VALID_USER = false;
 
     Button btn1, btn2;
-    Button btn3, btn4;    //testing
+    Button btn3, btn4, btn5;    //testing
     private Object AdapterView;
 
 
@@ -36,12 +36,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btn3 = (Button) findViewById(R.id.button3); //testing
         btn4 = (Button) findViewById(R.id.button4); //testing
+        btn5 = (Button) findViewById(R.id.button5); //testing
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
 
         btn3.setOnClickListener(this);  //testing
         btn4.setOnClickListener(this);  //testing
+        btn5.setOnClickListener(this);  //testing
 
 
     }
@@ -74,6 +76,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent4 = new Intent();
                 intent4.setClass(MainActivity.this,Profile_page.class);
                 startActivity(intent4);
+                break;
+
+            case R.id.button5:
+                Intent intent5 = new Intent();
+                intent5.setClass(MainActivity.this, order_list.class);
+                startActivity(intent5);
                 break;
 
             default:
