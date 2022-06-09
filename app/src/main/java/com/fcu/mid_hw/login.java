@@ -59,7 +59,7 @@ public class login extends AppCompatActivity
             if(restaurantoruser.getCheckedRadioButtonId()==R.id.login_r_user)
             {
                 Intent intent = new Intent();
-                intent.setClass(login.this, Discover_page.class);
+                intent.setClass(login.this, user_Search.class);
                 startActivity(intent);
             }
             else
