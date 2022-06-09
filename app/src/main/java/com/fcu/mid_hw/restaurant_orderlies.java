@@ -20,14 +20,14 @@ public class restaurant_orderlies extends AppCompatActivity {
     RecyclerView rv;
 
     static final String db_name="restDB";
-    static final String tb_name="info";
+    static final String tb_name="orderss";
     public Integer j;
     SQLiteDatabase db;
 
 
     String[] restaurantArray = {"restaurant Never","restaurant Gonna","restaurant Give","restaurant You"};
     String[] orderTimeArray = {"01:23","02:34","","03:45"};
-    Integer[] statArray = {0, 2, 2, 3};
+    String[] statArray = {"0", "2","2", "3"};
     String[] delivererArray = {"alex","betty","carl","dave"};
     String[] priceArray = {"123","234","147","258"};
 
@@ -49,7 +49,9 @@ public class restaurant_orderlies extends AppCompatActivity {
             do{
                 restaurantArray[j]=c.getString(0);
                 orderTimeArray[j]= c.getString(1);
-                delivererArray[j]= c.getString(2);
+                statArray[j]=c.getString(2);
+                delivererArray[j]= c.getString(3);
+                priceArray[j]=c.getString(4);
                 j=j+1;
             } while (c.moveToNext());
 
@@ -60,6 +62,8 @@ public class restaurant_orderlies extends AppCompatActivity {
         rv.setAdapter(ad);
         rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setHasFixedSize(true);
+
+
 
 
 

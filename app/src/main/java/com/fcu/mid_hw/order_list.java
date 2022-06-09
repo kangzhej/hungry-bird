@@ -12,7 +12,7 @@ public class order_list extends AppCompatActivity {
 
     String[] restaurantArray = {"restaurant Never","restaurant Gonna","restaurant Give","restaurant You","restaurant Up","restaurant Never","restaurant Gonna","restaurant Let","restaurant You","restaurant Down"};
     String[] orderTimeArray = {"01:23","02:34","","03:45","04:56","05:12","06:23","07:34","08:45","09:56"};
-    Integer[] statArray = {0, 2, 2, 3, 4, 3, 1, 1, 4};
+    String[] statArray = {"0","2", "2", "3", "4", "3", "1", "1", "4"};
     String[] delivererArray = {"alex","betty","carl","dave","eric","frank","george","harry","iris","john"};
     String[] priceArray = {"123","234","147","258","369","21","32","54","43","65"};
 

@@ -12,7 +12,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     private Context mContext;
     private String[] mRest;
     private String[] mOrderTime;
-    private Integer[] mstat;
+    private String[] mstat;
     private String[] mdeliverer;
     private String[] mprice;
     public static class MyViewHolder extends RecyclerView.ViewHolder {
@@ -26,11 +26,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             this.rest = (TextView) itemView.findViewById(R.id.restaurant);
             this.orderTime = (TextView) itemView.findViewById(R.id.order_time);
             this.stat = (TextView) itemView.findViewById(R.id.status);
-            this.deliverer = (TextView) itemView.findViewById(R.id.status);
+            this.deliverer = (TextView) itemView.findViewById(R.id.deliverer);
             this.price = (TextView) itemView.findViewById(R.id.price);
         }
     }
-    public CustomAdapter(Context mContext, String[] restaurant, String[] orderTime, Integer[] statArray, String[] delivererArray, String[] priceArray) {
+    public CustomAdapter(Context mContext, String[] restaurant, String[] orderTime, String[] statArray, String[] delivererArray, String[] priceArray) {
         this.mContext = mContext;
         this.mRest = restaurant;
         this.mOrderTime = orderTime;
@@ -49,6 +49,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     public void onBindViewHolder(final MyViewHolder holder, final int i) {
         holder.rest.setText(mRest[i]);
         holder.orderTime.setText(mOrderTime[i] + "ordered");
+
+        holder.stat.setText(mstat[i]);
+        /*
         switch(mstat[i])
         {
             case 0:
@@ -71,6 +74,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                 holder.stat.setText("status 5");
                 break;
         }
+        */
         holder.deliverer.setText("deliverer: " + mdeliverer[i]);
         holder.price.setText("price: " + mprice[i]);
     }
