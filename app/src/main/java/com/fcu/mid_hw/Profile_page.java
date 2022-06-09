@@ -30,8 +30,8 @@ public class Profile_page extends AppCompatActivity {
         ImageView profilehoto = this.findViewById(R.id.profilePic);
         profilehoto.setImageResource(R.drawable.pizza_2);
 
-        ((TextView) findViewById(R.id.user_name)).setText("jane");
-        ((TextView) findViewById(R.id.position)).setText("the great FCU");
+        ((TextView) findViewById(R.id.user_name)).setText("BBQ RESTAURANT");
+        ((TextView) findViewById(R.id.position)).setText("TAICHUNG");
 
         Integer[] selectedPhotos = personalPhotos;
 
