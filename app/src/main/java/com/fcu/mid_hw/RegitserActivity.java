@@ -61,12 +61,13 @@ public class RegitserActivity extends AppCompatActivity implements OnCompleteLis
 
     private void addUser() {
         String email = etEmail.getText().toString();
+        String phone = "123";
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference usersRef = firebaseDatabase.getReference("users");
-        DatabaseReference phoneRef = usersRef.child("123456789");
+        DatabaseReference phoneRef = usersRef.child(phone);
         Map<String,Object> user = new HashMap<>();
         user.put("email",email);
-        user.put("phone","123456789");
+        user.put("phone",phone);
         phoneRef.updateChildren(user);
 
 
