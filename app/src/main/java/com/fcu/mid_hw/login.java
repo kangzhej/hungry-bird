@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -53,9 +54,21 @@ public class login extends AppCompatActivity
         if(task.isSuccessful()){
             Toast.makeText(this,"Successful",Toast.LENGTH_LONG).show();
             //MainActivity.VALID_USER = true;
-            Intent intent = new Intent();
-            intent.setClass(login.this, Discover_page.class);
-            startActivity(intent);
+            RadioGroup restaurantoruser = (RadioGroup)findViewById(R.id.radioGroup2);
+
+            if(restaurantoruser.getCheckedRadioButtonId()==R.id.login_r_user)
+            {
+                Intent intent = new Intent();
+                intent.setClass(login.this, Discover_page.class);
+                startActivity(intent);
+            }
+            else
+            {
+                Intent intent2 = new Intent();
+                intent2.setClass(login.this, profile_restaurant.class);
+                startActivity(intent2);
+            }
+
 
             finish();
         }else{
