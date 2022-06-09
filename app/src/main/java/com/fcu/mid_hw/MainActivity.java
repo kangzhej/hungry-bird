@@ -9,11 +9,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    public static boolean VALID_USER = false;
+
 
     Button btn1, btn2;
     Button btn3, btn4, btn5;    //testing
-    private Object AdapterView;
+
 
 
 
@@ -25,11 +25,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ImageView logo = this.findViewById(R.id.logo);
         logo.setImageResource(R.drawable.logo);
 
-        //if (!VALID_USER){
-        //    Intent intent = new Intent();
-        //    intent.setClass(this,login.class);
-        //    startActivity(intent);
-        //}
 
         btn1 = (Button) findViewById(R.id.next_but);
         btn2 = (Button) findViewById(R.id.button2);
@@ -80,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.button5:
                 Intent intent5 = new Intent();
-                intent5.setClass(MainActivity.this, order_list.class);
+                intent5.setClass(MainActivity.this, database.class);
                 startActivity(intent5);
                 break;
 
