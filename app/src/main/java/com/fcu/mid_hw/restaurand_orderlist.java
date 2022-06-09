@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class restaurand_orderlist extends AppCompatActivity {
 
@@ -30,7 +33,12 @@ public class restaurand_orderlist extends AppCompatActivity {
         rv.setAdapter(ad);
         rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setHasFixedSize(true);
+
+
+
     }
+
+
 
     public void rob(View view){
         Intent intent = new Intent();
