@@ -36,11 +36,11 @@ public class database extends AppCompatActivity {
     */
         String createTable = "Create Table If Not Exists " +
                 tb_name +
-                "(id VARCHAR(16), " +
-                "name VARCHAR(16), " +
-                "driver VARCHAR(16)," +
-                "time1 VARCHAR(16)," +
-                "price VARCHAR(16))";
+                "(id INT(16), " +
+                "name VARCHAR(32), " +
+                "driver VARCHAR(32)," +
+                "time VARCHAR(32)," +
+                "price VARCHAR(32))";
         db.execSQL(createTable);
 
 
@@ -51,10 +51,10 @@ public class database extends AppCompatActivity {
 
         if (c.getCount()==0){
             //call addData
-            addData("1","kk","tom" ,"10:11","100");
-            addData("2","name","Jhon" ,"10:20","120");
-            addData("3","eric","Coco" ,"10:30","220");
-            addData("4","may","Willy" ,"10:33","80");
+            addData(1,"kk","tom" ,"10:11","100");
+            addData(2,"name","Jhon" ,"10:20","120");
+            addData(3,"eric","Coco" ,"10:30","220");
+            addData(4,"may","Willy" ,"10:33","80");
 
 
             c=db.rawQuery("SELECT * FROM "+tb_name,null);
@@ -70,8 +70,6 @@ public class database extends AppCompatActivity {
 
 
 
-
-
         if(c.moveToFirst()){
             String str="總共有 "+c.getCount()+"筆資料\n" ;
             str+="-----\n";
@@ -80,7 +78,7 @@ public class database extends AppCompatActivity {
                 str+="id: " + c.getString(0)+"\n";
                 str+="name: " + c.getString(1)+"\n";
                 str+="driver: " + c.getString(2)+"\n";
-                str+="time: " + c.getString(3)+"\n";
+                str+="time1: " + c.getString(3)+"\n";
                 str+="price: " + c.getString(4)+"\n";
                 str+="-----\n";
             } while (c.moveToNext());
@@ -93,26 +91,26 @@ public class database extends AppCompatActivity {
     }
 
 
-    /*
-        private void addData(Integer id,String name,String email) {
-            ContentValues cv=new ContentValues(3);
+/*
+    private void addData(Integer id,String name,String email) {
+        ContentValues cv=new ContentValues(3);
 
-            cv.put("id",id);
-            cv.put("name",name);
-            cv.put("email",email);
+        cv.put("id",id);
+        cv.put("name",name);
+        cv.put("email",email);
 
-            db.insert(tb_name,null,cv);
+        db.insert(tb_name,null,cv);
 
-        }
-    */
-    private void addData(String id,String name,String driver,String time,String price) {
-        ContentValues cv=new ContentValues(8);
+    }
+*/
+    private void addData(Integer id,String name,String driver,String time,String price) {
+        ContentValues cv=new ContentValues(5);
 
         cv.put("id",id);
         cv.put("name",name);
         cv.put("driver",driver);
-        cv.put("time1",driver);
-        cv.put("price",driver);
+        cv.put("time",time);
+        cv.put("price",price);
 
         db.insert(tb_name,null,cv);
 
