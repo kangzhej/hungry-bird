@@ -13,7 +13,7 @@ public class database extends AppCompatActivity {
 
     static final String db_name="restDB";
     //static final String tb_name="info";
-    static final String tb_name="order1";
+    static final String tb_name="orders";
     SQLiteDatabase db;
 
     @Override

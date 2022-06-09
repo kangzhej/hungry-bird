@@ -25,8 +25,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             super(itemView);
             this.rest = (TextView) itemView.findViewById(R.id.restaurant);
             this.orderTime = (TextView) itemView.findViewById(R.id.order_time);
-            this.stat = (TextView) itemView.findViewById(R.id.status);
-            this.deliverer = (TextView) itemView.findViewById(R.id.deliverer);
+            this.stat = (TextView) itemView.findViewById(R.id.deliverer);
+            this.deliverer = (TextView) itemView.findViewById(R.id.status);
             this.price = (TextView) itemView.findViewById(R.id.price);
         }
     }
@@ -48,9 +48,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int i) {
         holder.rest.setText(mRest[i]);
-        holder.orderTime.setText(mOrderTime[i] + "ordered");
-
-        holder.stat.setText(mstat[i]);
+        holder.orderTime.setText("restaurant :"+mOrderTime[i] );
         /*
         switch(mstat[i])
         {
@@ -75,8 +73,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                 break;
         }
         */
+        holder.stat.setText("price: "+mstat[i]);
         holder.deliverer.setText("deliverer: " + mdeliverer[i]);
-        holder.price.setText("price: " + mprice[i]);
+        holder.price.setText("time: " + mprice[i]);
     }
     @Override
     public int getItemCount() {
