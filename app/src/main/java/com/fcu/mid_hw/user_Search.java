@@ -32,27 +32,12 @@ public class user_Search extends AppCompatActivity {
 
         String name = etname.getText().toString();
 
-        db = openOrCreateDatabase(db_name, Context.MODE_PRIVATE, null);
-        Cursor c=db.rawQuery("SELECT * FROM "+tb_name +"WHERE `name` LIKE"+name,null);
+        //db = openOrCreateDatabase(db_name, Context.MODE_PRIVATE, null);
+        //Cursor c=db.rawQuery("SELECT * FROM "+tb_name +"WHERE `name` LIKE"+name,null);
 
-
-        if(c.moveToFirst()){
-            String str="總共有 "+c.getCount()+"筆資料\n" ;
-            str+="-----\n";
-
-            do{
-                str+="id: " + c.getString(0)+"\n";
-                str+="name: " + c.getString(1)+"\n";
-                str+="-----\n";
-            } while (c.moveToNext());
-
-            TextView txv2=(TextView) findViewById(R.id.txv4);
-            txv2.setText(str);
-
-        }
-
-
-
+        Intent intent = new Intent();
+        intent.setClass(user_Search.this, Profile_page.class);
+        startActivity(intent);
 
 
     }
