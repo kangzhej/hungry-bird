@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/kangz/AndroidStudioProjects/hungry-bird_2/app/src/main/res/layout/cardlayout.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/kangz/AndroidStudioProjects/hungry-bird_2/app/src/main/res/layout/logged_out.xml" value="0.1" />
+        <entry key="..\:/Users/kangz/AndroidStudioProjects/hungry-bird_2/app/src/main/res/layout/login.xml" value="0.1" />
         <entry key="..\:/Users/kangz/AndroidStudioProjects/hungry-bird_2/app/src/main/res/layout/menu.xml" value="0.1" />
         <entry key="..\:/Users/kangz/AndroidStudioProjects/hungry-bird_2/app/src/main/res/layout/menu_card.xml" value="0.1" />
+        <entry key="..\:/Users/kangz/AndroidStudioProjects/hungry-bird_2/app/src/main/res/layout/order_list.xml" value="0.1" />
         <entry key="..\:/Users/kkchiu/StudioProjects/hungry-bird/app/src/main/res/layout/activity_image_adapter.xml" value="0.19927536231884058" />
         <entry key="..\:/Users/kkchiu/StudioProjects/hungry-bird/app/src/main/res/layout/activity_loggin.xml" value="0.1390625" />
         <entry key="..\:/Users/kkchiu/StudioProjects/hungry-bird/app/src/main/res/layout/activity_main.xml" value="0.1" />
