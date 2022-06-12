@@ -9,11 +9,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
+    public static boolean VALID_USER = false;
 
     Button btn1, btn2;
-    Button btn3, btn4, btn5;    //testing
-
+    Button btn3, btn4, btn5, btn6;    //testing
+    private Object AdapterView;
 
 
 
@@ -25,6 +25,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ImageView logo = this.findViewById(R.id.logo);
         logo.setImageResource(R.drawable.logo);
 
+        //if (!VALID_USER){
+        //    Intent intent = new Intent();
+        //    intent.setClass(this,login.class);
+        //    startActivity(intent);
+        //}
 
         btn1 = (Button) findViewById(R.id.next_but);
         btn2 = (Button) findViewById(R.id.button2);
@@ -32,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn3 = (Button) findViewById(R.id.button3); //testing
         btn4 = (Button) findViewById(R.id.button4); //testing
         btn5 = (Button) findViewById(R.id.button5); //testing
+        btn6 = (Button) findViewById(R.id.menu_test); //testing
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
@@ -39,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn3.setOnClickListener(this);  //testing
         btn4.setOnClickListener(this);  //testing
         btn5.setOnClickListener(this);  //testing
+        btn6.setOnClickListener(this);  //testing
 
 
     }
@@ -53,32 +60,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.setClass(MainActivity.this, login.class);
                 startActivity(intent);
 
-            break;
+                break;
             case R.id.button2:
                 Intent intent2 = new Intent();
                 intent2.setClass(MainActivity.this, RegitserActivity.class);
                 startActivity(intent2);
                 break;
-/*
+
             case R.id.button3:
                 Intent intent3 = new Intent();
                 intent3.setClass(MainActivity.this,Discover_page.class);
                 startActivity(intent3);
                 break;
 
-
             case R.id.button4:
                 Intent intent4 = new Intent();
-                intent4.setClass(MainActivity.this, restaurant_menu.class);
+                intent4.setClass(MainActivity.this,Profile_page.class);
                 startActivity(intent4);
                 break;
 
             case R.id.button5:
                 Intent intent5 = new Intent();
-                intent5.setClass(MainActivity.this, database.class);
+                intent5.setClass(MainActivity.this, order_list.class);
                 startActivity(intent5);
                 break;
-*/
+
+            case R.id.menu_test:
+                Intent intent6 = new Intent();
+                intent6.setClass(MainActivity.this, menu.class);
+                startActivity(intent6);
+                break;
+
             default:
                 break;
         }
