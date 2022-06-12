@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -39,6 +40,13 @@ public class Profile_page extends AppCompatActivity {
         gvPhotos.setNumColumns(2);
         ImageAdapter ia = new ImageAdapter(this, selectedPhotos);
         gvPhotos.setAdapter(ia);
+    }
+
+    public void gotomenu(View view)
+    {
+        Intent intent = new Intent();
+        intent.setClass(Profile_page.this, bookmenu.class);
+        startActivity(intent);
     }
 }
 

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/kkchiu/StudioProjects/hungry-bird/app/src/main/res/layout/activity_bookmenu.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/kkchiu/StudioProjects/hungry-bird/app/src/main/res/layout/activity_database.xml" value="0.13148148148148148" />
         <entry key="..\:/Users/kkchiu/StudioProjects/hungry-bird/app/src/main/res/layout/activity_image_adapter.xml" value="0.19927536231884058" />
         <entry key="..\:/Users/kkchiu/StudioProjects/hungry-bird/app/src/main/res/layout/activity_loggin.xml" value="0.1390625" />
@@ -17,7 +18,7 @@
         <entry key="..\:/Users/kkchiu/StudioProjects/hungry-bird/app/src/main/res/layout/login.xml" value="0.22780797101449277" />
         <entry key="..\:/Users/kkchiu/StudioProjects/hungry-bird/app/src/main/res/layout/order_list.xml" value="0.20153985507246377" />
         <entry key="..\:/Users/kkchiu/StudioProjects/hungry-bird/app/src/main/res/layout/profile.xml" value="0.19927536231884058" />
-        <entry key="..\:/Users/kkchiu/StudioProjects/hungry-bird/app/src/main/res/layout/profile_restaurant.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/kkchiu/StudioProjects/hungry-bird/app/src/main/res/layout/profile_restaurant.xml" value="0.22" />
         <entry key="..\:/Users/kkchiu/StudioProjects/hungry-bird/app/src/main/res/layout/register1.xml" value="0.22780797101449277" />
         <entry key="..\:/Users/kkchiu/StudioProjects/hungry-bird/app/src/main/res/layout/register2.xml" value="0.22780797101449277" />
         <entry key="..\:/Users/kkchiu/StudioProjects/hungry-bird/app/src/main/res/layout/restaurand_orderlist.xml" value="0.20153985507246377" />
