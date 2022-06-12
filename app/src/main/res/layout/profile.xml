@@ -54,6 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#FFEB3B"
+            android:onClick="gotomenu"
             android:text="MESSAGE"
             android:textColor="#000000" />
 

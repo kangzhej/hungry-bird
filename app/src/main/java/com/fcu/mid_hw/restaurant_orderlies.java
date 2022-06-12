@@ -25,11 +25,11 @@ public class restaurant_orderlies extends AppCompatActivity {
     SQLiteDatabase db;
 
 
-    String[] restaurantArray = {"restaurant Never","restaurant Gonna","restaurant Give","restaurant You"};
-    String[] orderTimeArray = {"01:23","02:34","","03:45"};
-    String[] statArray = {"01:23","02:34","","03:45"};
-    String[] delivererArray = {"alex","betty","carl","dave"};
-    String[] priceArray = {"123","234","147","258"};
+    String[] restaurantArray = {"","","",""};
+    String[] orderTimeArray = {"","","",""};
+    String[] statArray = {"","","",""};
+    String[] delivererArray = {"","","",""};
+    String[] priceArray = {"","","",""};
 
     CustomAdapter ad;
 

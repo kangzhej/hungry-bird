@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MID_HW">
         <activity
+            android:name=".bookmenu"
+            android:exported="false" />
+        <activity
             android:name=".user_Search"
             android:exported="false" />
         <activity
@@ -22,7 +25,7 @@
             android:name=".database"
             android:exported="false" />
         <activity
-            android:name=".Order"
+            android:name=".order_list"
             android:exported="false" />
         <activity
             android:name=".profile_restaurant"

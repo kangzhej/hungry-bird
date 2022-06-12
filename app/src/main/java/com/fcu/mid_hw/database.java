@@ -13,7 +13,7 @@ public class database extends AppCompatActivity {
 
     static final String db_name="restDB";
     //static final String tb_name="info";
-    static final String tb_name="orders";
+    static final String tb_name="orders1";
     SQLiteDatabase db;
 
     @Override
@@ -51,10 +51,10 @@ public class database extends AppCompatActivity {
 
         if (c.getCount()==0){
             //call addData
-            addData(1,"kk","tom" ,"10:11","100");
-            addData(2,"name","Jhon" ,"10:20","120");
-            addData(3,"eric","Coco" ,"10:30","220");
-            addData(4,"may","Willy" ,"10:33","80");
+            addData(1,"kk","tom" ,"10min","100");
+            addData(2,"name","Jhon" ,"15min","120");
+            addData(3,"eric","Coco" ,"30min","220");
+            addData(4,"may","Willy" ,"1hour","80");
 
 
             c=db.rawQuery("SELECT * FROM "+tb_name,null);

@@ -1,6 +1,11 @@
 package com.fcu.mid_hw;
 
+import android.content.Context;
+import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,13 +15,17 @@ public class order_list extends AppCompatActivity {
 
     RecyclerView rv;
 
-    String[] restaurantArray = {"restaurant Never","restaurant Gonna","restaurant Give","restaurant You","restaurant Up","restaurant Never","restaurant Gonna","restaurant Let","restaurant You","restaurant Down"};
-    String[] orderTimeArray = {"01:23","02:34","","03:45","04:56","05:12","06:23","07:34","08:45","09:56"};
-    //Integer[] statArray = {0,2, 2, 3, 4, 3, 1, 1, 4};
-    String[] statArray = {"alex","betty","carl","dave","eric","frank","george","harry","iris","john"};
-    String[] delivererArray = {"alex","betty","carl","dave","eric","frank","george","harry","iris","john"};
-    String[] priceArray = {"123","234","147","258","369","21","32","54","43","65"};
+    static final String db_name="restDB";
+    static final String tb_name="orders1";
 
+    String[] restaurantArray = {"","","",""};
+    String[] orderTimeArray = {"","","",""};
+    //Integer[] statArray = {0,2, 2, 3, 4, 3, 1, 1, 4};
+    String[] statArray = {"","","",""};
+    String[] delivererArray = {"","","",""};
+    String[] priceArray = {"","","",""};
+    public Integer j;
+    SQLiteDatabase db;
     //123
 
     CustomAdapter ad;
@@ -24,10 +33,36 @@ public class order_list extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.order_list);
+
+        db = openOrCreateDatabase(db_name, Context.MODE_PRIVATE, null);
+        Cursor c=db.rawQuery("SELECT * FROM "+tb_name,null);
+
+        j=0;
+        if(c.moveToFirst()){
+
+            do{
+                restaurantArray[j]=c.getString(0);
+                orderTimeArray[j]= c.getString(1);
+                delivererArray[j]= c.getString(2);
+                priceArray[j]=c.getString(3);
+                statArray[j]=c.getString(4);
+                j=j+1;
+            } while (c.moveToNext());
+
+        }
+
         rv = (RecyclerView)findViewById(R.id.rv);
         ad = new CustomAdapter(order_list.this, restaurantArray, orderTimeArray, statArray, delivererArray, priceArray);
         rv.setAdapter(ad);
         rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setHasFixedSize(true);
+    }
+
+    public void btosurch(View view)
+    {
+        db.close();
+        Intent intent = new Intent();
+        intent.setClass(order_list.this, user_Search.class);
+        startActivity(intent);
     }
 }
